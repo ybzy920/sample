@@ -25,3 +25,8 @@ Route::post('/users', 'UsersController@store')->name('users.store');
 Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.eidt');
 Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
 Route::delete('/users/{user}', 'UsersController@destroy')->name('users.destroy');
+
+
+Route::get('login', 'SessionsController@create')->name('login');
+Route::post('login', 'SessionsController@store')->name('login');
+Route::delete('logout', 'SessionsController@destory')->name('logout');
